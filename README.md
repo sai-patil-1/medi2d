@@ -34,7 +34,7 @@ py manage.py runserver
 then copy the local url and run it on your browser...
 
 Note-
-- Create make migration file by 'python manage.py makemigrations'
+- Create make migration file by 'python manage.py migrate'
 - Create Super User by 'python manage.py createsuperuser', give required acceses to registered users and add few dummy entries in database manually.
 
 - To Edit Patient Data or to Add Medical History, first Select Patient.
