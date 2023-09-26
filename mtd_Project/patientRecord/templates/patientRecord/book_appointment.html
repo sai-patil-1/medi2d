@@ -1,0 +1,13 @@
+{% extends "patientRecord/patient_info.html" %}
+
+{% block title %}Book Appointment{% endblock %}
+
+{% block add_patient %}
+
+<form method="post">
+    {{ form_class.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Update"></p>
+</form>
+
+{% endblock add_patient %}

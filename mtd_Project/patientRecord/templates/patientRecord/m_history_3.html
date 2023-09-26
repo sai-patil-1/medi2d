@@ -1,0 +1,29 @@
+{% extends "patientRecord/m_history_2.html" %}
+
+{% block title %}Appointment{% endblock %}
+
+{% block add_history %}
+
+<hr style="border-top:1px solid #000; clear:both;" />
+<h3 class="my-3">Add History</h3>
+
+<form method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      {% for field in form_class %}
+      <th>{{ field.label }}</th>
+      {% endfor %}
+    </tr>
+    {% for field in form_class %}
+    <td>{{ field }}</td>
+    {% endfor %}
+  </table>
+  <br>
+
+  <p><input type="submit" value="Add Record"></p>
+</form>
+
+
+
+{% endblock add_history %}
