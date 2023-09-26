@@ -16,26 +16,32 @@ Medical Records Management System.
 * Unit tests.
 
 ## Setting up the project
-Clone the repository.
-Then in the command prompt type:
-(after entering the project..)
+1) Clone the repository.
+
+2) To install required packages and dependencies.
 ```
 pip install -r requirements.txt
 ```
-to install required packages and dependencies.  
-Now, go to 'mtd_Project' directory by typing command
+
+3) Create make migration file
 ```
-cd mtd_Project
+python manage.py migrate
 ```
-Then to run the project, type the command:
+
+4) Create SuperUser
+```
+python manage.py createsuperuser
+```
+
+5) Go to 'mtd_Project' directory. Then to run the project, type the command:
 ```
 py manage.py runserver
 ```
-then copy the local url and run it on your browser...
+6) Give required acceses to registered users and add few dummy entries in database manually. (http://127.0.0.1:8000/admin/)
+
+7) Go to 'http://127.0.0.1:8000/account/'
 
 Note-
-- Create make migration file by 'python manage.py migrate'
-- Create Super User by 'python manage.py createsuperuser', give required acceses to registered users and add few dummy entries in database manually.
-
+- Application fetches data from database, so first create dummy entries to avoid errors.
 - To Edit Patient Data or to Add Medical History, first Select Patient.
 - Setup SMTP to send Mail.
